@@ -20,21 +20,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
     //IBActions
     @IBAction func onCalculateButtonPressed(sender: AnyObject) {
 
+        //Vars to setup app
         var getNumber:Int = (numberTextField.text as NSString).integerValue
         var getMultiplier:Int? = multiplierLabel.text?.toInt()
         var answer = getNumber * getMultiplier!
         var divAnswer = getNumber / getMultiplier!
 
-
-        if answer >= 20 {
-
-            self.view.backgroundColor = UIColor.greenColor()
-
-        } else {
-
-            self.view.backgroundColor = UIColor.whiteColor()
-        }
-
+        //Chanage from multiply to divide
         if operatorSegmentControl.selectedSegmentIndex == 0 {
 
             answerLabel.text = "\(answer)"
@@ -44,6 +36,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
             answerLabel.text = "\(divAnswer)"
         }
 
+        //Change background colors
+        if answer >= 20 {
+
+            self.view.backgroundColor = UIColor.greenColor()
+
+        } else {
+
+            self.view.backgroundColor = UIColor.whiteColor()
+        }
 
         numberTextField.endEditing(true)
 
