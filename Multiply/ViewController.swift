@@ -105,7 +105,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     //Reload
     @IBAction func refreshAction(sender: AnyObject) {
 
-        self.view.backgroundColor = UIColor(red: 0.09, green: 0.69, blue: 0.835, alpha: 1.0)
+        self.view.backgroundColor = UIColor(red: 0.133, green: 0.243, blue: 0.353, alpha: 1.0)
         numberTextField.text = nil
         operatorSegmentControl.selectedSegmentIndex = 0
         multiplierLabel.text = "\(10)"
