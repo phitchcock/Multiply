@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
 
+    var refreshCntrl : UIRefreshControl!
+
     //IBOutlets
     @IBOutlet weak var numberTextField: UITextField!
     @IBOutlet weak var multiplierLabel: UILabel!
@@ -41,7 +43,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         //Change background colors
         if answer >= 20 {
 
-            self.view.backgroundColor = UIColor.greenColor() //UIColor(red: 0.09, green: 0.69, blue: 0.835, alpha: 1.0)
+            self.view.backgroundColor = UIColor(red: 0.09, green: 0.69, blue: 0.835, alpha: 1.0)
 
         } else {
 
@@ -51,17 +53,17 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
         if (answer % 3 == 0) && (answer % 5 == 0) {
 
-            answerLabel.text = "fizzbuzz"
+            fizzBuzzLabel.text = "fizzbuzz"
             fizzBuzzLabel.textColor = UIColor.blueColor()
 
         } else if (answer % 5 == 0) {
 
-            answerLabel.text = "buzz"
+            fizzBuzzLabel.text = "buzz"
             fizzBuzzLabel.textColor = UIColor.redColor()
 
         } else if (answer % 3 == 0) {
 
-            answerLabel.text = "fizz"
+            fizzBuzzLabel.text = "fizz"
             fizzBuzzLabel.textColor = UIColor.grayColor()
 
         }
@@ -102,6 +104,17 @@ class ViewController: UIViewController, UITextFieldDelegate {
         return UIStatusBarStyle.LightContent
     }
 
+    @IBAction func refreshAction(sender: AnyObject) {
+
+        self.view.backgroundColor = UIColor(red: 0.09, green: 0.69, blue: 0.835, alpha: 1.0)
+        numberTextField.text = nil
+        operatorSegmentControl.selectedSegmentIndex = 0
+        multiplierLabel.text = "\(10)"
+        multiplierSlider.value = 10
+        answerLabel.text = "The answer is ???"
+        fizzBuzzLabel.text = "Is it fizz buzz or fizzbuzz"
+
+    }
 
 }
 
