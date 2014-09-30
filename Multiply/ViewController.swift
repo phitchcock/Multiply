@@ -81,6 +81,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -92,6 +94,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
         self.view.endEditing(true)
 
+    }
+
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+
+        return UIStatusBarStyle.LightContent
     }
 
 
