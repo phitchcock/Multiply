@@ -10,8 +10,6 @@ import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
 
-    var refreshCntrl : UIRefreshControl!
-
     //IBOutlets
     @IBOutlet weak var numberTextField: UITextField!
     @IBOutlet weak var multiplierLabel: UILabel!
@@ -48,7 +46,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         } else {
 
             self.view.backgroundColor = UIColor(red: 0.243, green: 0.373, blue: 0.482, alpha: 1.0)
-
         }
 
         if (answer % 3 == 0) && (answer % 5 == 0) {
@@ -66,6 +63,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
             fizzBuzzLabel.text = "fizz"
             fizzBuzzLabel.textColor = UIColor.grayColor()
 
+        } else {
+
+            fizzBuzzLabel.text = "Not fizzbuzz"
         }
 
         numberTextField.endEditing(true)
@@ -84,7 +84,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
 
     }
 
@@ -96,7 +95,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
 
         self.view.endEditing(true)
-
     }
 
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
@@ -104,6 +102,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         return UIStatusBarStyle.LightContent
     }
 
+    //Reload
     @IBAction func refreshAction(sender: AnyObject) {
 
         self.view.backgroundColor = UIColor(red: 0.09, green: 0.69, blue: 0.835, alpha: 1.0)
@@ -113,7 +112,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         multiplierSlider.value = 10
         answerLabel.text = "The answer is ???"
         fizzBuzzLabel.text = "Is it fizz buzz or fizzbuzz"
-
     }
 
 }
