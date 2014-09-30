@@ -50,15 +50,18 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
         if (answer % 3 == 0) {
 
-            self.fizzBuzzLabel.text = "fizz"
+            fizzBuzzLabel.text = "fizz"
+            fizzBuzzLabel.textColor = UIColor.blueColor()
 
         } else if (answer % 5 == 0) {
 
-            self.fizzBuzzLabel.text = "buzz"
+            fizzBuzzLabel.text = "buzz"
+            fizzBuzzLabel.textColor = UIColor.redColor()
 
         } else if (answer % 3 == 0) && (answer % 5 == 0) {
 
-            self.fizzBuzzLabel.text = "fizzbuzz"
+            fizzBuzzLabel.text = "fizzbuzz"
+            fizzBuzzLabel.textColor = UIColor.grayColor()
 
         }
 
