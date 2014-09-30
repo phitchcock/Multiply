@@ -15,6 +15,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var multiplierLabel: UILabel!
     @IBOutlet weak var answerLabel: UILabel!
     @IBOutlet weak var multiplierSlider: UISlider!
+    @IBOutlet weak var fizzBuzzLabel: UILabel!
     @IBOutlet weak var operatorSegmentControl: UISegmentedControl!
 
     //IBActions
@@ -22,7 +23,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
         //Vars to setup app
         var getNumber:Int = (numberTextField.text as NSString).integerValue
-        var getMultiplier:Int? = multiplierLabel.text?.toInt()
+        var getMultiplier:Int? = multiplierLabel.text?.toInt()!
+
         var answer = getNumber * getMultiplier!
         var divAnswer = getNumber / getMultiplier!
 
@@ -44,6 +46,20 @@ class ViewController: UIViewController, UITextFieldDelegate {
         } else {
 
             self.view.backgroundColor = UIColor.whiteColor()
+        }
+
+        if (answer % 3 == 0) {
+
+            self.fizzBuzzLabel.text = "fizz"
+
+        } else if (answer % 5 == 0) {
+
+            self.fizzBuzzLabel.text = "buzz"
+
+        } else if (answer % 3 == 0) && (answer % 5 == 0) {
+
+            self.fizzBuzzLabel.text = "fizzbuzz"
+
         }
 
         numberTextField.endEditing(true)

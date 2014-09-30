@@ -13,7 +13,6 @@
 		D0B5BB9919DA09150043A1ED /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0B5BB9819DA09150043A1ED /* Images.xcassets */; };
 		D0B5BB9C19DA09150043A1ED /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0B5BB9A19DA09150043A1ED /* LaunchScreen.xib */; };
 		D0B5BBA819DA09150043A1ED /* MultiplyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B5BBA719DA09150043A1ED /* MultiplyTests.swift */; };
-		D0B5BBB519DA09390043A1ED /* CheckMate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0B5BBB419DA09390043A1ED /* CheckMate.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +37,6 @@
 		D0B5BBA619DA09150043A1ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0B5BBA719DA09150043A1ED /* MultiplyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplyTests.swift; sourceTree = "<group>"; };
 		D0B5BBB119DA092A0043A1ED /* Multiply-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Multiply-Bridging-Header.h"; sourceTree = "<group>"; };
-		D0B5BBB419DA09390043A1ED /* CheckMate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CheckMate.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +44,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0B5BBB519DA09390043A1ED /* CheckMate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,7 +92,6 @@
 		D0B5BB8F19DA09150043A1ED /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				D0B5BBB419DA09390043A1ED /* CheckMate.framework */,
 				D0B5BB9019DA09150043A1ED /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -424,6 +420,7 @@
 				D0B5BBAD19DA09150043A1ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D0B5BBAE19DA09150043A1ED /* Build configuration list for PBXNativeTarget "MultiplyTests" */ = {
 			isa = XCConfigurationList;
@@ -432,6 +429,7 @@
 				D0B5BBB019DA09150043A1ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
