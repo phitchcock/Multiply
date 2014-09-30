@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        //CheckMate.initializeFramework("06df7a420ac9f313b5ccd5823345bea3")
+        CheckMate.initializeFramework("06df7a420ac9f313b5ccd5823345bea3")
         return true
     }
 

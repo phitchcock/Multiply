@@ -41,7 +41,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         //Change background colors
         if answer >= 20 {
 
-            self.view.backgroundColor = UIColor(red: 0.09, green: 0.69, blue: 0.835, alpha: 1.0)
+            self.view.backgroundColor = UIColor.greenColor() //UIColor(red: 0.09, green: 0.69, blue: 0.835, alpha: 1.0)
 
         } else {
 
@@ -49,19 +49,19 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
         }
 
-        if (answer % 3 == 0) {
+        if (answer % 3 == 0) && (answer % 5 == 0) {
 
-            fizzBuzzLabel.text = "fizz"
+            answerLabel.text = "fizzbuzz"
             fizzBuzzLabel.textColor = UIColor.blueColor()
 
         } else if (answer % 5 == 0) {
 
-            fizzBuzzLabel.text = "buzz"
+            answerLabel.text = "buzz"
             fizzBuzzLabel.textColor = UIColor.redColor()
 
-        } else if (answer % 3 == 0) && (answer % 5 == 0) {
+        } else if (answer % 3 == 0) {
 
-            fizzBuzzLabel.text = "fizzbuzz"
+            answerLabel.text = "fizz"
             fizzBuzzLabel.textColor = UIColor.grayColor()
 
         }

@@ -45,8 +45,8 @@
                                 <rect key="frame" x="84" y="102" width="143" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
-                                    <segment title="Multiply"/>
-                                    <segment title="Divide"/>
+                                    <segment title="*"/>
+                                    <segment title="/"/>
                                 </segments>
                                 <color key="tintColor" red="0.97647058819999999" green="0.98431372549999996" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
                             </segmentedControl>

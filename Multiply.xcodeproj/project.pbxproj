@@ -13,6 +13,7 @@
 		D0B5BB9919DA09150043A1ED /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0B5BB9819DA09150043A1ED /* Images.xcassets */; };
 		D0B5BB9C19DA09150043A1ED /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0B5BB9A19DA09150043A1ED /* LaunchScreen.xib */; };
 		D0B5BBA819DA09150043A1ED /* MultiplyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B5BBA719DA09150043A1ED /* MultiplyTests.swift */; };
+		D0F0AD1419DA69CE00682969 /* CheckMate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F0AD1319DA69CE00682969 /* CheckMate.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +38,7 @@
 		D0B5BBA619DA09150043A1ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0B5BBA719DA09150043A1ED /* MultiplyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplyTests.swift; sourceTree = "<group>"; };
 		D0B5BBB119DA092A0043A1ED /* Multiply-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Multiply-Bridging-Header.h"; sourceTree = "<group>"; };
+		D0F0AD1319DA69CE00682969 /* CheckMate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CheckMate.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0F0AD1419DA69CE00682969 /* CheckMate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +95,7 @@
 		D0B5BB8F19DA09150043A1ED /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D0F0AD1319DA69CE00682969 /* CheckMate.framework */,
 				D0B5BB9019DA09150043A1ED /* Info.plist */,
 			);
 			name = "Supporting Files";
