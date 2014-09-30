@@ -41,11 +41,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
         //Change background colors
         if answer >= 20 {
 
-            self.view.backgroundColor = UIColor.greenColor()
+            self.view.backgroundColor = UIColor(red: 0.09, green: 0.69, blue: 0.835, alpha: 1.0)
 
         } else {
 
-            self.view.backgroundColor = UIColor.whiteColor()
+            self.view.backgroundColor = UIColor(red: 0.243, green: 0.373, blue: 0.482, alpha: 1.0)
+
         }
 
         if (answer % 3 == 0) {
