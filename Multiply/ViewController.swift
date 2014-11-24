@@ -31,6 +31,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         calculateButton.layer.borderColor = UIColor(red: 0.424, green: 0.51, blue: 0.682, alpha: 1).CGColor
         calculateButton.layer.borderWidth = 1
         calculateButton.layer.cornerRadius = 8
+        answerLabel.layer.cornerRadius = 8
+        fizzBuzzLabel.layer.cornerRadius = 8
 
     }
 
