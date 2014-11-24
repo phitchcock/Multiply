@@ -1,5 +1,7 @@
-### Project Requirements ###
 ## Simple Swift Fizz Buzz Calculator ##
+### Project Requirements ###
+
+<a href="url"><img src="https://cloud.githubusercontent.com/assets/2372619/5175183/2a36d546-73ed-11e4-91fd-a97d3229bdcf.png"></a>
 
 1. As a user, I want to be able to enter a number
 2. As a user, I want to see my multiplier

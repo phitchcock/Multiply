@@ -28,7 +28,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         numberTextField.layer.cornerRadius = 8
-        calculateButton.layer.borderColor = UIColor.blueColor().CGColor
+        calculateButton.layer.borderColor = UIColor(red: 0.424, green: 0.51, blue: 0.682, alpha: 1).CGColor
         calculateButton.layer.borderWidth = 1
         calculateButton.layer.cornerRadius = 8
 
@@ -55,7 +55,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
         //FizzBuzz
         if (answer % 3 == 0) && (answer % 5 == 0) {
-            fizzBuzzLabel.text = "fizzbuzz"
+            fizzBuzzLabel.text = "fizz buzz"
             fizzBuzzLabel.textColor = UIColor.blueColor()
         } else if (answer % 5 == 0) {
             fizzBuzzLabel.text = "buzz"
@@ -64,7 +64,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
             fizzBuzzLabel.text = "fizz"
             fizzBuzzLabel.textColor = UIColor.grayColor()
         } else {
-            fizzBuzzLabel.text = "Not fizzbuzz"
+            fizzBuzzLabel.text = "Try again"
         }
         numberTextField.endEditing(true)
     }
@@ -79,8 +79,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         operatorSegmentControl.selectedSegmentIndex = 0
         multiplierLabel.text = "\(10)"
         multiplierSlider.value = 10
-        answerLabel.text = "The answer is ???"
-        fizzBuzzLabel.text = "Is it fizz buzz or fizzbuzz"
+        answerLabel.text = "Answer"
+        fizzBuzzLabel.text = "Fizz buzz or fizzbuzz"
     }
 
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
