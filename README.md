@@ -1,16 +1,12 @@
-### Swift Info ###
+### Project Requirements ###
 
-To setup CheckMate
-
-1. Drop framework into project
-2. Create new objective-c file
-3. Delete the new m file - not necessary but file is not needed
-4. In h file that was created import CheckMate:
-```
-#import <CheckMate/CheckMate.h>
-```
-5. Add framework call in didFinishLaunchingWithOptions
-```
-CheckMate.initializeFramework("YOUR API KEY")
-```    
-6. Swifted up and ready to code!
+1. As a user, I want to be able to enter a number
+2. As a user, I want to see my multiplier
+3. As a user, I want to see the answer to the equation
+4. As a user, I want to execute the calculation for my equation
+5. As a user, I want to see the whole equation
+6. As a user, I want to have color
+7. As a user, I want to fizz buzz
+8. As a user, I want to change the value of multiplierLabel with a UISlider
+9. As a user, I want to switch the operator using UISegmentControl
+10. As a user, I want the keyboard to dismiss when I press calculate
