@@ -10,103 +10,72 @@ import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
 
-    //IBOutlets
+    //MARK: - Variables and IBOutlets
+    var getNumber:Int!
+    var getMultiplier:Int!
+    var answer:Int!
+    var divAnswer:Int!
+
     @IBOutlet weak var numberTextField: UITextField!
     @IBOutlet weak var multiplierLabel: UILabel!
     @IBOutlet weak var answerLabel: UILabel!
     @IBOutlet weak var multiplierSlider: UISlider!
     @IBOutlet weak var fizzBuzzLabel: UILabel!
     @IBOutlet weak var operatorSegmentControl: UISegmentedControl!
+    @IBOutlet weak var calculateButton: UIButton!
 
-    //IBActions
-    @IBAction func onCalculateButtonPressed(sender: AnyObject) {
-
-        //Vars to setup app
-        var getNumber:Int = (numberTextField.text as NSString).integerValue
-        var getMultiplier:Int? = multiplierLabel.text?.toInt()!
-
-        var answer = getNumber * getMultiplier!
-        var divAnswer = getNumber / getMultiplier!
-
-        //Chanage from multiply to divide
-        if operatorSegmentControl.selectedSegmentIndex == 0 {
-
-            answerLabel.text = "\(answer)"
-
-        } else {
-
-            answerLabel.text = "\(divAnswer)"
-        }
-
-        //Change background colors
-        if answer >= 20 {
-
-            self.view.backgroundColor = UIColor(red: 0.09, green: 0.69, blue: 0.835, alpha: 1.0)
-
-        } else {
-
-            self.view.backgroundColor = UIColor(red: 0.243, green: 0.373, blue: 0.482, alpha: 1.0)
-        }
-
-        if (answer % 3 == 0) && (answer % 5 == 0) {
-
-            fizzBuzzLabel.text = "fizzbuzz"
-            fizzBuzzLabel.textColor = UIColor.blueColor()
-
-        } else if (answer % 5 == 0) {
-
-            fizzBuzzLabel.text = "buzz"
-            fizzBuzzLabel.textColor = UIColor.redColor()
-
-        } else if (answer % 3 == 0) {
-
-            fizzBuzzLabel.text = "fizz"
-            fizzBuzzLabel.textColor = UIColor.grayColor()
-
-        } else {
-
-            fizzBuzzLabel.text = "Not fizzbuzz"
-        }
-
-        numberTextField.endEditing(true)
-
-        //numberTextField.text = nil
-
-    }
-
-    @IBAction func sliderAction(sender: AnyObject) {
-
-        var fixedValue = (multiplierSlider.value as NSNumber).integerValue
-
-        multiplierLabel.text = "\(fixedValue)"
-    }
-
+    //MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        numberTextField.layer.cornerRadius = 8
+        calculateButton.layer.borderColor = UIColor.blueColor().CGColor
+        calculateButton.layer.borderWidth = 1
+        calculateButton.layer.cornerRadius = 8
 
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
-    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+    //MARK: - IBActions
+    @IBAction func onCalculateButtonPressed(sender: UIButton) {
+        getNumber = (numberTextField.text as NSString).integerValue
+        getMultiplier = multiplierLabel.text?.toInt()!
 
-        self.view.endEditing(true)
+        answer = getNumber * getMultiplier
+        divAnswer = getNumber / getMultiplier
+
+        //Chanage from multiply to divide
+        if operatorSegmentControl.selectedSegmentIndex == 0 {
+            answerLabel.text = "\(answer)"
+        } else {
+            answerLabel.text = "\(divAnswer)"
+        }
+
+        //FizzBuzz
+        if (answer % 3 == 0) && (answer % 5 == 0) {
+            fizzBuzzLabel.text = "fizzbuzz"
+            fizzBuzzLabel.textColor = UIColor.blueColor()
+        } else if (answer % 5 == 0) {
+            fizzBuzzLabel.text = "buzz"
+            fizzBuzzLabel.textColor = UIColor.redColor()
+        } else if (answer % 3 == 0) {
+            fizzBuzzLabel.text = "fizz"
+            fizzBuzzLabel.textColor = UIColor.grayColor()
+        } else {
+            fizzBuzzLabel.text = "Not fizzbuzz"
+        }
+        numberTextField.endEditing(true)
     }
 
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-
-        return UIStatusBarStyle.LightContent
+    @IBAction func sliderAction(sender: UISlider) {
+        var fixedValue = (multiplierSlider.value as NSNumber).integerValue
+        multiplierLabel.text = "\(fixedValue)"
     }
 
-    //Reload
-    @IBAction func refreshAction(sender: AnyObject) {
-
-        self.view.backgroundColor = UIColor(red: 0.133, green: 0.243, blue: 0.353, alpha: 1.0)
-        numberTextField.text = nil
+    @IBAction func refreshAction(sender: UINavigationItem) {
+        numberTextField.text = ""
         operatorSegmentControl.selectedSegmentIndex = 0
         multiplierLabel.text = "\(10)"
         multiplierSlider.value = 10
@@ -114,5 +83,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         fizzBuzzLabel.text = "Is it fizz buzz or fizzbuzz"
     }
 
+    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+        view.endEditing(true)
+    }
 }
 
